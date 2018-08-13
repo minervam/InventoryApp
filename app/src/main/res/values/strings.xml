@@ -1,0 +1,58 @@
+<resources>
+    <!-- Name for the application [CHAR LIMIT=12] -->
+    <string name="app_name">Book Inventory</string>
+
+    <!-- Label for overflow menu option that inserts fake book data into the app [CHAR LIMIT=20] -->
+    <string name="action_insert_dummy_data">Insert Dummy Data</string>
+
+    <!-- Label for overflow menu option that deletes all book data in the app [CHAR LIMIT=20] -->
+    <string name="action_delete_all_entries">Delete All Books</string>
+
+    <!-- Title for the activity to add a new book [CHAR LIMIT=20] -->
+    <string name="editor_activity_title_new_book">Add a Book</string>
+
+    <!-- Label for editor menu option to save book and leave editor [CHAR LIMIT=20] -->
+    <string name="action_save">Save</string>
+
+    <!-- Label for editor overflow menu option that deletes the current book [CHAR LIMIT=20] -->
+    <string name="action_delete">Delete</string>
+
+    <!-- Label for book information in the editor [CHAR LIMIT=30] -->
+    <string name="book_info">Book Info</string>
+
+    <!-- Label for overview category of attributes in the editor [CHAR LIMIT=30] -->
+    <string name="book_title">Title</string>
+
+    <!-- Label for book quantity information in the editor [CHAR LIMIT=30] -->
+    <string name="book_quantity">Quantity</string>
+
+    <!-- Label for product name information in the editor [CHAR LIMIT=30] -->
+    <string name="book_name">Product Name</string>
+
+    <!-- Text hint for book title field in the editor [CHAR LIMIT=30] -->
+    <string name="hint_book_title">Enter title </string>
+
+    <!-- Label for pricing information in the editor [CHAR LIMIT=30] -->
+    <string name="book_price">Enter price</string>
+
+    <!-- Text hint for book price field in the editor [CHAR LIMIT=10] -->
+    <string name="hint_book_price">Price</string>
+
+    <!-- Text hint for book quantity field in the editor [CHAR LIMIT=30] -->
+    <string name="hint_book_quantity">Quantity</string>
+
+    <!-- Units for books (per unit) [CHAR LIMIT=5] -->
+    <string name="unit_book_quantity">per unit</string>
+
+    <!-- Units for supplier name of the book [CHAR LIMIT=30] -->
+    <string name="supplier_info">Supplier Info</string>
+
+    <!-- Units for supplier name of the book [CHAR LIMIT=30] -->
+    <string name="supplier_name">Supplier Name</string>
+
+    <!-- Text hint for the supplier name field in the editor [CHAR LIMIT=30] -->
+    <string name="hint_supplier_name">Supplier Name</string>
+
+    <!-- Text hint for the supplier name field in the editor [CHAR LIMIT=30] -->
+    <string name="hint_supplier_phone">Supplier Phone Number</string>
+</resources>
