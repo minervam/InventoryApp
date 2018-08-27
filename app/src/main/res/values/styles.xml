@@ -42,4 +42,32 @@
         <item name="android:paddingTop">16dp</item>
         <item name="android:textAppearance">?android:textAppearanceSmall</item>
     </style>
+
+    <!-- ListView Styles -->
+
+    <style name="GENListView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/textsize_small</item>
+    </style>
+
+    <style name="ListViewProduct" parent="GENListView">
+        <item name="android:textColor">@color/editorColorPrimary</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="ListViewProductDetails" parent="GENListView">
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="ListViewStock">
+        <item name="android:layout_width">@dimen/dimen_0dp</item>
+        <item name="android:layout_height">@dimen/list_item_height</item>
+        <item name="android:layout_weight">0.6</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:background">@color/colorAccent</item>
+    </style>
 </resources>

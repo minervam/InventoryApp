@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- The app branding color for the app bar -->
-    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimary">#0277BD</color>
 
     <!-- Darker variant for the status bar and contextual app bars -->
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimaryDark">#01579B</color>
 
     <!-- Accent color for UI controls like checkboxes and text fields -->
     <color name="colorAccent">#00BCD4</color>
@@ -17,4 +17,16 @@
 
     <!-- Color for the floating action button -->
     <color name="fabColor">#FFFFFF</color>
+
+    <!-- Color for the list name -->
+    <color name="list_nameColor">#0277BD</color>
+
+    <!-- List Price Background [CHAR LIMIT=NONE] -->
+    <color name="list_price_textBackground">#C5CAE9</color>
+
+    <!-- List Price Text Color [CHAR LIMIT=NONE] -->
+    <color name="list_priceText">#3F51B5</color>
+
+    <!-- List Quantity Text Color [CHAR LIMIT=NONE] -->
+    <color name="list_quantityText">#263238</color>
 </resources>

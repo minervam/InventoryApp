@@ -136,12 +136,12 @@ public class InventoryActivity extends AppCompatActivity {
         // and book attributes are the values.
         ContentValues values = new ContentValues();
         values.put(BookEntry.COLUMN_PRODUCT_NAME, "The Count of Monte Cristo");
-        values.put(BookEntry.COLUMN_BOOK_PRICE, "$5.00");
+        values.put(BookEntry.COLUMN_BOOK_PRICE, "5.00");
         values.put(BookEntry.COLUMN_BOOK_QUANTITY, 50);
         values.put(BookEntry.COLUMN_SUPPLIER_NAME, "Baker & Taylor");
         values.put(BookEntry.COLUMN_SUPPLIER_PHONE, "(800) 775-1800");
 
-        // Insert a new row for "Wuthering Heights" book in the database, returning the ID of that new row.
+        // Insert a new row for a book in the database, returning the ID of that new row.
         // The first argument for db.insert() is the books table name.
         // The second argument provides the name of a column in which the framework
         // can insert NULL in the event that the ContentValues is empty (if
