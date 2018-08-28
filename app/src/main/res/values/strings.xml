@@ -8,6 +8,13 @@
     <!-- Label for overflow menu option that deletes all book data in the app [CHAR LIMIT=20] -->
     <string name="action_delete_all_entries">Delete All Books</string>
 
+
+    <!-- Title text for the empty view, which describes the empty dog house image [CHAR LIMIT=50] -->
+    <string name="empty_view_title_text">It feels a bit empty here...</string>
+
+    <!-- Subtitle text for the empty view that prompts the user to add a pet [CHAR LIMIT=50] -->
+    <string name="empty_view_subtitle_text">Get started by adding a book</string>
+
     <!-- Button name on list view [CHAR LIMIT=5] -->
     <string name="buy">buy</string>
 

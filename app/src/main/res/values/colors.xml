@@ -21,6 +21,9 @@
     <!-- Color for the list name -->
     <color name="list_nameColor">#0277BD</color>
 
+    <!-- Color for the list background -->
+    <color name="list_background">#F2F6c3</color>
+
     <!-- List Price Background [CHAR LIMIT=NONE] -->
     <color name="list_price_textBackground">#C5CAE9</color>
 
