@@ -8,9 +8,9 @@ import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
 import android.net.Uri;
+import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -83,12 +83,11 @@ public class InventoryActivity extends AppCompatActivity implements
      * Helper method to insert hardcoded book data into the database.
      */
     private void insertBook() {
-        // Create a ContentValues object where column names are the keys,
-        // and its corresponding attributes are the values.
         ContentValues values = new ContentValues();
         values.put(BookEntry.COLUMN_PRODUCT_NAME, "The Adventures of Sherlock Holms");
         values.put(BookEntry.COLUMN_BOOK_PRICE, "$9.99");
-        values.put(BookEntry.COLUMN_BOOK_QUANTITY, "West Coast Supplier");
+        values.put(BookEntry.COLUMN_BOOK_QUANTITY, 5);
+        values.put(BookEntry.COLUMN_SUPPLIER_NAME, "West Coast Supplier");
         values.put(BookEntry.COLUMN_SUPPLIER_PHONE, "1-800-123-4569");
 
         // Insert a new row for the book into the provider using the ContentResolver.
