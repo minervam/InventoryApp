@@ -11,17 +11,18 @@ import com.example.android.inventoryapp.data.BookContract.BookEntry;
  */
 public class BookDbHelper extends SQLiteOpenHelper {
 
-    public static final String LOG_TAG = BookDbHelper.class.getSimpleName();
-
     /**
      * Name of the database file
      */
-    private static final String DATABASE_NAME = "bookstore.db";
+    private static final String DATABASE_NAME = "bookinventory.db";
 
     /**
      * Database version. If you change the database schema, then increment the database version.
      */
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 5;
+
+    private static final String SQL_DELETE_BOOKS_ENTRIES =
+            "DROP TABLE IF EXISTS " + BookEntry.TABLE_NAME;
 
     /**
      * Constructs a new instance of {@link BookDbHelper}.
@@ -42,21 +43,26 @@ public class BookDbHelper extends SQLiteOpenHelper {
         // Create a String that contains the SQL statement to create the books table
         String SQL_CREATE_BOOKS_TABLE = "CREATE TABLE " + BookEntry.TABLE_NAME + " ("
                 + BookEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-                + BookEntry.COLUMN_PRODUCT_NAME + " TEXT NOT NULL, "
-                + BookEntry.COLUMN_BOOK_PRICE + " TEXT, "
-                + BookEntry.COLUMN_SUPPLIER_NAME + " TEXT, "
-                + BookEntry.COLUMN_SUPPLIER_PHONE + " TEXT, "
-                + BookEntry.COLUMN_BOOK_QUANTITY + " INTEGER NOT NULL DEFAULT 0);";
+                + BookEntry.COLUMN_BOOK_NAME + " TEXT NOT NULL, "
+                + BookEntry.COLUMN_BOOK_PRICE + " REAL NOT NULL, "
+                + BookEntry.COLUMN_BOOK_QUANTITY + " INTEGER NOT NULL DEFAULT 0, "
+                + BookEntry.COLUMN_SUPPLIER_NAME + " TEXT NOT NULL, "
+                + BookEntry.COLUMN_SUPPLIER_PHONE + " TEXT NOT NULL );";
 
         // Execute the SQL statement
         db.execSQL(SQL_CREATE_BOOKS_TABLE);
+    }
+
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        db.execSQL(SQL_DELETE_BOOKS_ENTRIES);
+        onCreate(db);
     }
 
     /**
      * This is called when the database needs to be upgraded.
      */
     @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        // The database is still at version 1, so there's nothing to do be done here.
+    public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        onUpgrade(db, oldVersion, newVersion);
     }
 }

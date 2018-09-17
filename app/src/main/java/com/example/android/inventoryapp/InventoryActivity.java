@@ -17,6 +17,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.android.inventoryapp.data.BookContract.BookEntry;
 
@@ -36,7 +37,7 @@ public class InventoryActivity extends AppCompatActivity implements
         setContentView(R.layout.activity_inventory);
 
         // Setup FAB to open EditorActivity
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -46,7 +47,7 @@ public class InventoryActivity extends AppCompatActivity implements
         });
 
         // Find the ListView which will be populated with the book data
-        ListView bookListView = (ListView) findViewById(R.id.list);
+        ListView bookListView = findViewById(R.id.list);
 
         // Find and set empty view on the ListView, so that it only shows when the list has 0 items.
         View emptyView = findViewById(R.id.empty_view);
@@ -84,8 +85,8 @@ public class InventoryActivity extends AppCompatActivity implements
      */
     private void insertBook() {
         ContentValues values = new ContentValues();
-        values.put(BookEntry.COLUMN_PRODUCT_NAME, "The Adventures of Sherlock Holms");
-        values.put(BookEntry.COLUMN_BOOK_PRICE, "$9.99");
+        values.put(BookEntry.COLUMN_BOOK_NAME, "The Adventures of Sherlock Holmes");
+        values.put(BookEntry.COLUMN_BOOK_PRICE, "9.99");
         values.put(BookEntry.COLUMN_BOOK_QUANTITY, 5);
         values.put(BookEntry.COLUMN_SUPPLIER_NAME, "West Coast Supplier");
         values.put(BookEntry.COLUMN_SUPPLIER_PHONE, "1-800-123-4569");
@@ -100,7 +101,12 @@ public class InventoryActivity extends AppCompatActivity implements
      */
     private void deleteAllBooks() {
         int rowsDeleted = getContentResolver().delete(BookEntry.CONTENT_URI, null, null);
-        Log.v("InventoryActivity", rowsDeleted + " rows deleted from book database");
+        if (rowsDeleted > 0) {
+            Toast.makeText(InventoryActivity.this, getString(R.string.confirm_delete_all_entries),
+                    Toast.LENGTH_SHORT).show();
+        } else {
+            Log.v("InventoryActivity", rowsDeleted + " rows deleted from book database");
+        }
     }
 
     @Override
@@ -131,9 +137,10 @@ public class InventoryActivity extends AppCompatActivity implements
         // Define a projection that specifies the columns from the table we care about.
         String[] projection = {
                 BookEntry._ID,
-                BookEntry.COLUMN_PRODUCT_NAME,
+                BookEntry.COLUMN_BOOK_NAME,
                 BookEntry.COLUMN_BOOK_PRICE,
-                BookEntry.COLUMN_BOOK_QUANTITY };
+                BookEntry.COLUMN_BOOK_QUANTITY
+        };
 
         // This loader will execute the ContentProvider's query method on a background thread
         return new CursorLoader(this,   // Parent activity context

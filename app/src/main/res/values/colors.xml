@@ -10,7 +10,7 @@
     <color name="colorAccent">#00BCD4</color>
 
     <!-- Primary color for the editor -->
-    <color name="editorColorPrimary">#C5CAE9</color>
+    <color name="editorColorPrimary">#FFFFFF</color>
 
     <!-- Primary dark color for the editor -->
     <color name="editorColorPrimaryDark">#303F9F</color>
@@ -18,18 +18,7 @@
     <!-- Color for the floating action button -->
     <color name="fabColor">#FFFFFF</color>
 
-    <!-- Color for the list name -->
-    <color name="list_nameColor">#0277BD</color>
-
     <!-- Color for the list background -->
     <color name="list_background">#F2F6c3</color>
 
-    <!-- List Price Background [CHAR LIMIT=NONE] -->
-    <color name="list_price_textBackground">#C5CAE9</color>
-
-    <!-- List Price Text Color [CHAR LIMIT=NONE] -->
-    <color name="list_priceText">#3F51B5</color>
-
-    <!-- List Quantity Text Color [CHAR LIMIT=NONE] -->
-    <color name="list_quantityText">#263238</color>
 </resources>

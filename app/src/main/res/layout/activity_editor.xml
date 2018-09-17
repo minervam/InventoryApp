@@ -41,11 +41,34 @@
                 android:inputType="numberDecimal" />
 
             <!-- Book quantity field -->
-            <EditText
-                android:id="@+id/edit_book_quantity"
-                style="@style/EditorFieldStyle"
-                android:hint="@string/hint_book_quantity"
-                android:inputType="number" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:gravity="left">
+
+                <ImageButton
+                    android:id="@+id/button_decrease"
+                    style="@style/QuantityAdjustmentStyle"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/minus_button" />
+
+                <EditText
+                    android:id="@+id/edit_book_quantity"
+                    style="@style/QuantityFieldStyle"
+                    android:layout_toRightOf="@id/button_decrease"
+                    android:hint="@string/hint_book_quantity"
+                    android:inputType="number"
+                    android:padding="@dimen/dimen_10dp" />
+
+                <ImageButton
+                    android:id="@+id/button_increase"
+                    style="@style/QuantityAdjustmentStyle"
+                    android:layout_toRightOf="@id/edit_book_quantity"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/add_button" />
+
+            </RelativeLayout>
         </LinearLayout>
     </LinearLayout>
 
@@ -53,8 +76,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="@dimen/activity_margin"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/activity_margin">
 
         <!-- Label -->
         <TextView
@@ -76,12 +99,30 @@
                 android:hint="@string/hint_supplier_name"
                 android:inputType="textCapWords" />
 
+
             <!-- Supplier Phone Number field -->
-            <EditText
-                android:id="@+id/edit_supplier_phone"
-                style="@style/EditorFieldStyle"
-                android:hint="@string/hint_supplier_phone"
-                android:inputType="textCapWords" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/activity_margin">
+
+                <EditText
+                    android:id="@+id/edit_supplier_phone"
+                    style="@style/PhoneFieldStyle"
+                    android:layout_width="166dp"
+                    android:hint="@string/hint_supplier_phone"
+                    android:inputType="textCapWords" />
+
+                <ImageButton
+                    android:id="@+id/button_phone"
+                    android:layout_width="53dp"
+                    android:layout_height="40dp"
+                    android:contentDescription="@string/phone_button"
+                    android:scaleType="centerInside"
+                    android:background="@color/fabColor"
+                    android:src="@drawable/phone_button" />
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
