@@ -19,7 +19,7 @@ public class BookDbHelper extends SQLiteOpenHelper {
     /**
      * Database version. If you change the database schema, then increment the database version.
      */
-    private static final int DATABASE_VERSION = 5;
+    private static final int DATABASE_VERSION = 1;
 
     private static final String SQL_DELETE_BOOKS_ENTRIES =
             "DROP TABLE IF EXISTS " + BookEntry.TABLE_NAME;

@@ -18,7 +18,10 @@
     <!-- Color for the floating action button -->
     <color name="fabColor">#FFFFFF</color>
 
+    <!-- Color for the background of the phone button -->
+    <color name="phoneButtonBackground">#FFFFFF</color>
+
     <!-- Color for the list background -->
-    <color name="list_background">#F2F6c3</color>
+    <color name="list_background">#F2F6C3</color>
 
 </resources>

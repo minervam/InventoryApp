@@ -85,8 +85,8 @@ public class EditorActivity extends AppCompatActivity implements
      * Variables to hold data from input fields
      */
     private String title;
-    private double price;
-    private int quantity;
+    private String price;
+    private String quantity;
     private String supplierName;
     private String supplierPhone;
 
@@ -119,14 +119,14 @@ public class EditorActivity extends AppCompatActivity implements
         // creating a new book.
         if (mCurrentBookUri == null) {
             // This is a new book, so change the app bar to say "Add a Book"
-            setTitle(getTitle() + getString(R.string.editor_activity_title_new_book));
+            setTitle(getString(R.string.editor_activity_title_new_book));
 
             // Invalidate the options menu, so the "Delete" menu option can be hidden.
             // (It doesn't make sense to delete a book that hasn't been created yet.)
             invalidateOptionsMenu();
         } else {
             // Otherwise this is an existing book, so change app bar to say "Edit Book"
-            setTitle(getTitle() + getString(R.string.editor_activity_title_edit_book));
+            setTitle(getString(R.string.editor_activity_title_edit_book));
 
             // Initialized a loader to read the book data from the database
             // Displays the current values in the editor
@@ -327,11 +327,11 @@ public class EditorActivity extends AppCompatActivity implements
 
     //Method to get inputs and validate them
     public boolean getEditorInputs() {
-        String title = mTitleEditText.getText().toString().trim();
-        String price = mPriceEditText.getText().toString().trim();
-        String quantity = mQuantityEditText.getText().toString().trim();
-        String supplierName = mSupplierNameEditText.getText().toString().trim();
-        String supplierPhone = mSupplierPhoneEditText.getText().toString().trim();
+        title = mTitleEditText.getText().toString().trim();
+        price = mPriceEditText.getText().toString().trim();
+        quantity = mQuantityEditText.getText().toString().trim();
+        supplierName = mSupplierNameEditText.getText().toString().trim();
+        supplierPhone = mSupplierPhoneEditText.getText().toString().trim();
 
         if (TextUtils.isEmpty(title)) {
             mTitleEditText.requestFocus();
@@ -339,7 +339,7 @@ public class EditorActivity extends AppCompatActivity implements
             return false;
         }
 
-        if (TextUtils.isEmpty(price)) {
+       if (TextUtils.isEmpty(price)) {
             mPriceEditText.setError(getString(R.string.missing_book_price));
             mPriceEditText.requestFocus();
             return false;

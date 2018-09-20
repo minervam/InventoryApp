@@ -22,7 +22,7 @@
 
         <TextView
             android:id="@+id/title"
-            style="@style/ListViewProduct"
+            style="@style/BookListView"
             tools:text="@string/book_title" />
 
         <TextView
@@ -34,7 +34,7 @@
 
     <TextView
         android:id="@+id/quantity"
-        style="@style/ListViewStock"
+        style="@style/QuantityListView"
         tools:text="99" />
 
     <ImageButton

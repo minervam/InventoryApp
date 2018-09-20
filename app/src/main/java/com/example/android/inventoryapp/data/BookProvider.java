@@ -164,7 +164,7 @@ public class BookProvider extends ContentProvider {
 
         // Check if ID is -1, which means record insert has failed
         if (id == -1) {
-            Log.e(LOG_TAG, (getContext().getString(R.string.error_insert, uri)));
+            Log.e(LOG_TAG, (getContext().getString(R.string.insert_error, uri)));
             return null;
         }
 
@@ -244,7 +244,6 @@ public class BookProvider extends ContentProvider {
                     getContext().getContentResolver().notifyChange(uri, null);
                 }
             }
-
             return rowsUpdated;
         }
     }
@@ -258,7 +257,7 @@ public class BookProvider extends ContentProvider {
      */
     public boolean validateInput(ContentValues values, String columns) {
 
-        String [] columnArgs = columns.split("|");
+        String[] columnArgs = columns.split("|");
         String bookName = null;
         Double bookPrice = null;
         Integer bookQuantity = null;
@@ -328,7 +327,7 @@ public class BookProvider extends ContentProvider {
             case BOOK_ID:
                 // Delete a single row given by the ID in the URI
                 selection = BookEntry._ID + "=?";
-                selectionArgs = new String[] {String.valueOf(ContentUris.parseId(uri))};
+                selectionArgs = new String[]{String.valueOf(ContentUris.parseId(uri))};
                 rowsDeleted = writableDatabase.delete(BookEntry.TABLE_NAME, selection, selectionArgs);
                 break;
 

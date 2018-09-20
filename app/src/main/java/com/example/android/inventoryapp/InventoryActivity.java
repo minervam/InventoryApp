@@ -47,7 +47,7 @@ public class InventoryActivity extends AppCompatActivity implements
         });
 
         // Find the ListView which will be populated with the book data
-        ListView bookListView = findViewById(R.id.list);
+        ListView bookListView = findViewById(R.id.list_inventory);
 
         // Find and set empty view on the ListView, so that it only shows when the list has 0 items.
         View emptyView = findViewById(R.id.empty_view);
@@ -86,7 +86,7 @@ public class InventoryActivity extends AppCompatActivity implements
     private void insertBook() {
         ContentValues values = new ContentValues();
         values.put(BookEntry.COLUMN_BOOK_NAME, "The Adventures of Sherlock Holmes");
-        values.put(BookEntry.COLUMN_BOOK_PRICE, "9.99");
+        values.put(BookEntry.COLUMN_BOOK_PRICE, "12");
         values.put(BookEntry.COLUMN_BOOK_QUANTITY, 5);
         values.put(BookEntry.COLUMN_SUPPLIER_NAME, "West Coast Supplier");
         values.put(BookEntry.COLUMN_SUPPLIER_PHONE, "1-800-123-4569");

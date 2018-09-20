@@ -14,8 +14,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <!-- Style for a category in the editor -->
-    <style name="CategoryStyle">
+    <!-- Style for a section in the editor -->
+    <style name="SectionStyle">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_weight">1</item>
@@ -25,7 +25,7 @@
         <item name="android:textAppearance">?android:textAppearanceMedium</item>
     </style>
 
-    <!-- Style for an EditText field in the editor -->
+    <!-- Style for an EditText field for Title, Price and Supplier Name in the editor -->
     <style name="EditorFieldStyle">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">wrap_content</item>
@@ -36,47 +36,60 @@
     <!-- Style for an EditText field for Quantity in the editor -->
     <style name="QuantityFieldStyle">
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_width">@dimen/dimen_80dp</item>
+        <item name="android:layout_width">@dimen/dimen_100dp</item>
         <item name="android:fontFamily" tools:ignore="NewApi">sans-serif-light</item>
-        <item name="android:textAppearance">?android:textAppearanceSmall</item>
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+        <item name="android:inputType">number</item>
+        <item name="android:padding">@dimen/dimen_10dp</item>
     </style>
 
+    <!-- Style for the Quantity Buttons -->
     <style name="QuantityAdjustmentStyle">
         <item name="android:layout_width">@dimen/dimen_30dp</item>
         <item name="android:layout_height">@dimen/dimen_30dp</item>
         <item name="android:background">@color/colorPrimary</item>
+        <item name="android:scaleType">centerInside</item>
     </style>
 
     <!-- Style for an EditText field for Phone Number in the editor -->
     <style name="PhoneFieldStyle">
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_width">@dimen/dimen_80dp</item>
+        <item name="android:layout_width">@dimen/dimen_170dp</item>
         <item name="android:fontFamily" tools:ignore="NewApi">sans-serif-light</item>
-        <item name="android:textAppearance">?android:textAppearanceSmall</item>
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+        <item name="android:inputType">phone</item>
+    </style>
+
+
+    <!-- Style for an Phone Button in the editor -->
+    <style name="PhoneButtonStyle">
+        <item name="android:layout_height">@dimen/dimen_40dp</item>
+        <item name="android:layout_width">@dimen/dimen_50dp</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:background">@color/phoneButtonBackground</item>
     </style>
 
     <!-- ListView Styles -->
-
-    <style name="GENListView">
+    <style name="GeneralListView">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:textSize">@dimen/textsize_small</item>
     </style>
 
-    <style name="ListViewProduct" parent="GENListView">
+    <style name="BookListView" parent="GeneralListView">
         <item name="android:textColor">@color/editorColorPrimary</item>
         <item name="android:maxLines">2</item>
         <item name="android:ellipsize">end</item>
     </style>
 
-    <style name="ListViewProductDetails" parent="GENListView">
+    <style name="ListViewProductDetails" parent="GeneralListView">
         <item name="android:textColor">@color/colorAccent</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
 
-    <style name="ListViewStock">
+    <style name="QuantityListView">
         <item name="android:layout_width">@dimen/dimen_0dp</item>
         <item name="android:layout_height">@dimen/list_item_height</item>
         <item name="android:layout_weight">0.6</item>
